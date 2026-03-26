@@ -1,49 +1,65 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ nombre }} - Hoja de Vida</title>
-    <link rel="stylesheet" href="/static/css/dev3/styles.css">
+    <title>Hoja de Vida | {{ nombre }}</title>
+    <link rel="stylesheet" href="{% static 'css/dev3/styles.css' %}">
 </head>
 <body>
-    <nav class="navbar">
-        <a href="/">← Volver al inicio</a>
-    </nav>
-    
-    <div class="container">
-        <header class="header">
-            <h1>{{ nombre }}</h1>
-            <p class="profesion">{{ profesion }}</p>
-        </header>
 
-        <section class="card">
-            <h2>Datos Personales</h2>
+    <div class="hoja-vida-container fade-in">
+        
+        <!-- HEADER -->
+        <div class="header seccion">
+            <div class="header-flex">
+                <div class="header-text">
+                    <h1>{{ nombre }}</h1>
+                    <p class="profesion">{{ profesion }}</p>
+                </div>
+                <div class="foto-perfil">
+                    <img src="https://i.postimg.cc/13ZNZWqP/yo.jpg" alt="Foto de perfil">
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTACTO -->
+        <div class="info-contacto seccion">
+            <h2>Información de Contacto</h2>
             <p><strong>Email:</strong> {{ email }}</p>
             <p><strong>Teléfono:</strong> {{ telefono }}</p>
-        </section>
+        </div>
 
-        <section class="card">
+        <!-- PERFIL -->
+        <div class="perfil seccion">
             <h2>Perfil Profesional</h2>
             <p>{{ perfil }}</p>
-        </section>
+        </div>
 
-        <section class="card">
+        <!-- FORMACIÓN -->
+        <div class="formacion seccion">
             <h2>Formación Académica</h2>
-            {% for item in formacion %}
-            <div class="formacion-item">
-                <h3>{{ item.titulo }}</h3>
-                <p>{{ item.institucion }} - {{ item.año }}</p>
+            <div class="item-formacion">
+                <strong>{{ formacion.titulo }}</strong>
+                <p>{{ formacion.institucion }}</p>
+                <p>{{ formacion.año }}</p>
             </div>
-            {% endfor %}
-        </section>
+        </div>
 
-        <section class="card">
+        <!-- REPOSITORIOS -->
+        <div class="repositorios seccion">
             <h2>Repositorios</h2>
-            {% for repo in repositorios %}
-            <a href="{{ repo.url }}" target="_blank" class="btn">{{ repo.nombre }}</a>
-            {% endfor %}
-        </section>
+            <div class="item-repo">
+                <strong>GitHub Personal</strong>
+                <p>Accede a mis proyectos y colaboraciones de código.</p>
+                <a href="https://github.com/AlejandraMontillaucc" target="_blank">
+                    Ver perfil →
+                </a>
+            </div>
+        </div>
+
     </div>
+
 </body>
 </html>
