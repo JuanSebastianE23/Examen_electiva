@@ -1,22 +1,19 @@
-# Proyecto Django
+# Portafolio Profesional - Django
 
-## Estructura de Ramas
-
-- `main`: Rama principal de producción
-- `dev`: Rama de desarrollo (base)
-- `feature/*`: Ramas para nuevas funcionalidades
-- `hotfix/*`: Ramas para correcciones urgentes
+Proyecto Django con portafolios de 3 desarrolladores.
 
 ## Instalación
 
 ```bash
 python -m venv venv
-source venv/bin/activate  # En Windows: venv\Scripts\activate
+venv\Scripts\activate
 pip install -r requirements.txt
-```
-
-## Ejecutar el proyecto
-
-```bash
 python manage.py runserver
 ```
+
+## URLs
+
+- `/` - Página principal
+- `/dev1/` - Desarrollador 1
+- `/dev2/` - Desarrollador 2
+- `/dev3/` - Desarrollador 3
