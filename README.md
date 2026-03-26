@@ -1,3 +1,6 @@
+# Portafolio Profesional - Django
+
+Proyecto Django con portafolios de 3 desarrolladores.
 # Proyecto Django - Portafolio Profesional
 
 ## 📋 Descripción
@@ -22,6 +25,7 @@ cd Examen_electiva
 ### 2. Crear y activar entorno virtual
 ```bash
 python -m venv venv
+venv\Scripts\activate
 
 # En Windows
 venv\Scripts\activate
@@ -33,8 +37,15 @@ source venv/bin/activate
 ### 3. Instalar dependencias
 ```bash
 pip install -r requirements.txt
+python manage.py runserver
 ```
 
+## URLs
+
+- `/` - Página principal
+- `/dev1/` - Desarrollador 1
+- `/dev2/` - Desarrollador 2
+- `/dev3/` - Desarrollador 3
 ### 4. Ejecutar migraciones
 ```bash
 python manage.py migrate
