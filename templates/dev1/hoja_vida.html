@@ -3,47 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ nombre }} - Hoja de Vida</title>
+    <title>Marlon Andrade | Software Developer</title>
     <link rel="stylesheet" href="/static/css/dev1/styles.css">
 </head>
 <body>
-    <nav class="navbar">
-        <a href="/">← Volver al inicio</a>
-    </nav>
-    
-    <div class="container">
-        <header class="header">
-            <h1>{{ nombre }}</h1>
-            <p class="profesion">{{ profesion }}</p>
-        </header>
-
-        <section class="card">
-            <h2>Datos Personales</h2>
-            <p><strong>Email:</strong> {{ email }}</p>
-            <p><strong>Teléfono:</strong> {{ telefono }}</p>
-        </section>
-
-        <section class="card">
-            <h2>Perfil Profesional</h2>
-            <p>{{ perfil }}</p>
-        </section>
-
-        <section class="card">
-            <h2>Formación Académica</h2>
-            {% for item in formacion %}
-            <div class="formacion-item">
-                <h3>{{ item.titulo }}</h3>
-                <p>{{ item.institucion }} - {{ item.año }}</p>
+    <nav>
+        <div class="container">
+            <div><strong>Marlon Andrade</strong></div>
+            <div>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
             </div>
-            {% endfor %}
-        </section>
+        </div>
+    </nav>
 
-        <section class="card">
-            <h2>Repositorios</h2>
-            {% for repo in repositorios %}
-            <a href="{{ repo.url }}" target="_blank" class="btn">{{ repo.nombre }}</a>
-            {% endfor %}
-        </section>
-    </div>
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p style="text-transform: uppercase; font-size: 0.9rem; color: #999;">Software Developer</p>
+                    <h1>Hi, I'm Marlon Andrade</h1>
+                    <p class="subtitle">Developer focused on software, artificial intelligence and technology projects</p>
+                    <p style="color: #999; margin-bottom: 30px;">
+                        Focused on developing web applications and technological solutions using modern tools like React, Next.js, Java and Python. 
+                        Motorcycle racing and music composition complement my technical profile.
+                    </p>
+                    <a href="#projects" class="btn">View Projects</a>
+                    <a href="#contact" class="btn btn-outline">Contact</a>
+                </div>
+                <div style="text-align: center;">
+                    <div style="width: 300px; height: 300px; background: #333; border-radius: 50%; margin: 0 auto;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto; color: #999;">
+                I'm Marlon Andrade, a developer focused on creating functional and well-structured technological solutions. 
+                I work with software development, artificial intelligence and systems design. Motorcycle racing and music 
+                composition bring different perspectives to my technical approach.
+            </p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Personal Portfolio</h3>
+                    <p>Professional website developed with Next.js and Tailwind CSS, designed to present projects, skills and trajectory as a software developer.</p>
+                    <div class="tags">
+                        <span class="tag">Next.js</span>
+                        <span class="tag">React</span>
+                        <span class="tag">Tailwind CSS</span>
+                        <span class="tag">TypeScript</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Academic Management System</h3>
+                    <p>Complete application to manage students, courses and grades, implementing CRUD operations with relational database and intuitive interface.</p>
+                    <div class="tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">Databases</span>
+                        <span class="tag">CRUD</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>REST API with Java</h3>
+                    <p>Robust backend service with RESTful endpoints for resource management, applying software architecture principles and development best practices.</p>
+                    <div class="tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">REST API</span>
+                        <span class="tag">Backend</span>
+                        <span class="tag">Architecture</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>Next.js</li>
+                        <li>React</li>
+                        <li>HTML/CSS</li>
+                        <li>Tailwind CSS</li>
+                        <li>UI/UX</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Backend</h3>
+                    <ul>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>RESTful APIs</li>
+                        <li>Software Architecture</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Databases</h3>
+                    <ul>
+                        <li>SQL</li>
+                        <li>E-R Modeling</li>
+                        <li>Database Design</li>
+                        <li>Data Integrity</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p style="color: #999; margin-bottom: 30px;">Have a project in mind or would you like to collaborate? I'd be happy to talk with you.</p>
+            <div class="contact-links">
+                <a href="mailto:yesitandrade24@gmail.com" class="contact-link">Gmail</a>
+                <a href="https://www.linkedin.com/in/marlon-andrade-4a60313ba/" target="_blank" class="contact-link">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Marlon Andrade. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
