@@ -1,3 +1,5 @@
+# Proyecto Django - Portafolio Profesional
+
 # Portafolio Profesional - Django
 
 Proyecto Django con portafolios de 3 desarrolladores.
@@ -38,6 +40,11 @@ source venv/bin/activate
 ```bash
 pip install -r requirements.txt
 python manage.py runserver
+```
+
+### 4. Ejecutar migraciones
+```bash
+python manage.py migrate
 ```
 
 ## URLs
