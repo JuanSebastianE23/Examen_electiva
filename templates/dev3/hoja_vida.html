@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ nombre }} - Hoja de Vida</title>
+    <link rel="stylesheet" href="/static/css/dev3/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/">← Volver al inicio</a>
+    </nav>
+    
+    <div class="container">
+        <header class="header">
+            <h1>{{ nombre }}</h1>
+            <p class="profesion">{{ profesion }}</p>
+        </header>
+
+        <section class="card">
+            <h2>Datos Personales</h2>
+            <p><strong>Email:</strong> {{ email }}</p>
+            <p><strong>Teléfono:</strong> {{ telefono }}</p>
+        </section>
+
+        <section class="card">
+            <h2>Perfil Profesional</h2>
+            <p>{{ perfil }}</p>
+        </section>
+
+        <section class="card">
+            <h2>Formación Académica</h2>
+            {% for item in formacion %}
+            <div class="formacion-item">
+                <h3>{{ item.titulo }}</h3>
+                <p>{{ item.institucion }} - {{ item.año }}</p>
+            </div>
+            {% endfor %}
+        </section>
+
+        <section class="card">
+            <h2>Repositorios</h2>
+            {% for repo in repositorios %}
+            <a href="{{ repo.url }}" target="_blank" class="btn">{{ repo.nombre }}</a>
+            {% endfor %}
+        </section>
+    </div>
+</body>
+</html>

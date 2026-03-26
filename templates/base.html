@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Portafolio Profesional{% endblock %}</title>
+    {% block styles %}{% endblock %}
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="{% url 'dev1:hoja-vida' %}">Desarrollador 1</a></li>
+            <li><a href="{% url 'dev2:hoja-vida' %}">Desarrollador 2</a></li>
+            <li><a href="{% url 'dev3:hoja-vida' %}">Desarrollador 3</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

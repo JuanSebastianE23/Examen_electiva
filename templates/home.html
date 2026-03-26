@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Profesional - Inicio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            max-width: 800px;
+            width: 100%;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .developers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .dev-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .dev-card:hover {
+            transform: translateY(-5px);
+        }
+        .dev-card a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎓 Portafolio Profesional</h1>
+        <p style="text-align: center; color: #666; margin-bottom: 20px;">
+            Selecciona un desarrollador para ver su hoja de vida
+        </p>
+        <div class="developers">
+            <div class="dev-card">
+                <a href="{% url 'dev1:hoja-vida' %}">Desarrollador 1</a>
+            </div>
+            <div class="dev-card">
+                <a href="{% url 'dev2:hoja-vida' %}">Desarrollador 2</a>
+            </div>
+            <div class="dev-card">
+                <a href="{% url 'dev3:hoja-vida' %}">Desarrollador 3</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
