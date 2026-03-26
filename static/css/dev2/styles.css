@@ -1,0 +1,126 @@
+/* Estilos para Desarrollador 2 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 15px 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+.navbar a:hover {
+    opacity: 0.8;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.header {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    margin-bottom: 30px;
+    border-top: 5px solid #f5576c;
+}
+
+.header h1 {
+    color: #f5576c;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.profesion {
+    color: #666;
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    border-left: 5px solid #f093fb;
+}
+
+.card:nth-child(even) {
+    border-left: 5px solid #f5576c;
+}
+
+.card h2 {
+    color: #f5576c;
+    border-bottom: 3px solid #f093fb;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.card p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.formacion-item {
+    margin-bottom: 15px;
+    padding: 15px;
+    background: linear-gradient(135deg, #fff5f7 0%, #ffe5f0 100%);
+    border-radius: 8px;
+    border-left: 3px solid #f5576c;
+}
+
+.formacion-item h3 {
+    color: #f5576c;
+    margin-bottom: 5px;
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin: 10px 10px 0 0;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(245, 87, 108, 0.4);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(245, 87, 108, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2em;
+    }
+    
+    .card {
+        padding: 20px;
+    }
+}
